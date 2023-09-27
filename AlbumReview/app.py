@@ -38,8 +38,8 @@ Arguments
 
 Usage
 -----------------
-Anatomy      ----  <script-name> <artist-name> <title-of-album> <author-to-imitate> <reviews-to-generate>
-Live Example ----  app.py "frank ocean" "nostalgia ultra" "chuck klosterman" "4"
+Anatomy      ----  <script-name> <artist-name> <title-of-album> <reviews-to-generate>
+Live Example ----  app.py "frank ocean" "nostalgia ultra" "4"
 \n""")
 
 """ When script is executed. """
