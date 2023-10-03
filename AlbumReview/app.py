@@ -41,12 +41,13 @@ Arguments
 
 Usage
 -----------------
-Anatomy      ----  <script-name> <artist-name> <title-of-album> <author-to-imitate> <reviews-to-generate>
-Live Example ----  app.py "frank ocean" "nostalgia ultra" "chuck klosterman" "4"
+Anatomy      ----  <script-name> <artist-name> <title-of-album> <reviews-to-generate>
+Live Example ----  app.py "frank ocean" "nostalgia ultra" "4"
 \n""")
 
 """ When script is executed. """
 if __name__ == "__main__":
+<<<<<<< HEAD
 	try:
 		""" Arguement Config """
 		arguments = { 
@@ -74,3 +75,23 @@ if __name__ == "__main__":
 			reviewIndex += 1
 	except Exception as err:
 		print(err)
+=======
+	checkArgumentLength()
+	artistName = arguments[ "artistName" ]
+	titleOfAlbumOrProject = arguments[ "titleOfAlbumOrProject" ]
+	reviewsToGenerate = arguments[ "reviewsToGenerate" ]
+	reviewsLeftToGenerate = int( reviewsToGenerate )
+	reviewIndex = 0
+	AlbumReview = AlbumReview.AlbumReview( artistName, titleOfAlbumOrProject )
+	while reviewsLeftToGenerate > 0:
+		randomAuthor = random.choice( list(AlbumReview.authorLikenesses ) )
+		AlbumReview.setAuthorToImitate( randomAuthor )
+		print( f"Review { reviewIndex + 1 } of { reviewsToGenerate } ")
+		print( f"Creating a { AlbumReview.getReviewLength() } character review by { AlbumReview.getAuthorToImitate() }." )
+		AlbumReview.create( randomAuthor )
+		AlbumReview.displayStats()
+		AlbumReview.displayReview()
+		AlbumReview.write()
+		reviewsLeftToGenerate -= 1
+		reviewIndex += 1
+>>>>>>> ea21a8df3544c4c5d5b2a0cd972aee5b3180bd57
