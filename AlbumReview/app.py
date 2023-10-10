@@ -47,7 +47,6 @@ Live Example ----  app.py "frank ocean" "nostalgia ultra" "4"
 
 """ When script is executed. """
 if __name__ == "__main__":
-<<<<<<< HEAD
 	try:
 		""" Arguement Config """
 		arguments = { 
@@ -75,7 +74,6 @@ if __name__ == "__main__":
 			reviewIndex += 1
 	except Exception as err:
 		print(err)
-=======
 	checkArgumentLength()
 	artistName = arguments[ "artistName" ]
 	titleOfAlbumOrProject = arguments[ "titleOfAlbumOrProject" ]
@@ -94,4 +92,3 @@ if __name__ == "__main__":
 		AlbumReview.write()
 		reviewsLeftToGenerate -= 1
 		reviewIndex += 1
->>>>>>> ea21a8df3544c4c5d5b2a0cd972aee5b3180bd57
