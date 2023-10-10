@@ -26,8 +26,8 @@ openai.api_key = API
 class AlbumReview:
 	reviewLengths = [ 256, 420, 1024 ]
 	reviewSentiments = set( { "positive", "negative", "scathing", "rave", "neutral", "political", "atheist", "critical", "granular", "opinionated", "sarcastic", "motivational", "illuminating", "concerned" } )
-	authorLikenesses = set( { "chuck klosterman", "octavia e. butler", "james baldwin", "stephen king", "ta-nehisi coates", "neal stephenson", "maya angelou", "mark twain", "natasha trethewey", "danez smith", "audre lorde", "tupac shakur", "morgan parker" } )
-	writingStyle = set( { "latin hexameter", "blank verse", "dactylic hexameter", "hendecasyllable","one of the four ancient chinese poetic", "modern academic prose", "contemporary art speak", "techspeak", "medieval french heroic epic", "african folklore", "sumerian tongues", "music liner notes", "pig latin", "iambic pentameter", "fluid ebonics" } )
+	authorLikenesses = set( { "chuck klosterman", "octavia e. butler", "james baldwin", "stephen king", "ta-nehisi coates", "neal stephenson", "maya angelou", "mark twain", "natasha trethewey", "danez smith", "audre lorde", "tupac shakur", "morgan parker", "quentin tarantino", "aaron mcgruder", "tom sachs", "gary vaynerchuck", "rza", "zora neale hurston", "tim ferris", "bobby hundreds", "malcolm gladwell", "malcom x", "gucci mane", "james prince", "trevor noah", "iceberg slim", "jay z", "kendrick lamar"  } )
+	writingStyle = set( { "latin hexameter", "blank verse", "dactylic hexameter", "hendecasyllable","one of the four ancient chinese poetic", "modern academic prose", "contemporary art speak", "techspeak", "medieval french heroic epic", "african folklore", "sumerian tongues", "music liner notes", "pig latin", "iambic pentameter", "fluid ebonics", "geechie", "patois", "a b rhymescheme", "stream of conscious" } )
 	def __init__( self, artistName:str, titleOfAlbumOrProject:str ):
 		self.artistName = artistName
 		self.authorToImitate = random.choice( list( self.authorLikenesses ) )
